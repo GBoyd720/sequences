@@ -1,0 +1,19 @@
+import 'package:equatable/equatable.dart';
+import 'package:sequences/features/sequences/domain/entities/choice.dart';
+import 'package:meta/meta.dart';
+
+class SequencePuzzle extends Equatable {
+  final String name;
+  final List<Choice> choices;
+  final List<Choice> challenges;
+  final int activeChallengeIndex;
+
+  SequencePuzzle({
+    @required this.name,
+    @required this.choices,
+    @required this.challenges,
+    @required this.activeChallengeIndex,
+  });
+
+  @override
+    List<Object> get props => [name, activeChallengeIndex];
